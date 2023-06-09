@@ -12,3 +12,27 @@ p{
 p.up{
     padding: 0px 20px 0px 20px;
 }
+div.second{
+    width: 49%;
+    height: 240px;
+    text-align: center;
+}
+dt, li.Comandos{
+    margin: 0px 0px 20px 0px;
+}
+div.deux{
+    border-right: 5px;
+    background-color: rgb(160, 128, 148);
+    position: relative;
+
+}
+div.trois{
+    border-left: 5px;
+    background-color: rgba(247, 229, 131, 0.767);
+    position: absolute;
+    left: 50%;
+    top: 110px;
+}
+b.blue{
+    color: rgb(18, 88, 129);
+}
