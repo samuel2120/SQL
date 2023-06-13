@@ -51,7 +51,7 @@
             </dl>
         </div>
         <div class="second trois">
-            <ol style="margin-top:46px ;">
+            <ol>
                 <li class="Comandos">
                     <b class="blue">SELECT</b> CategoryID, CategoryName <b class="blue">FROM</b> Categories
                 </li>
@@ -67,7 +67,212 @@
                     <b class="blue">UPDATE</b> Categories <b class="blue">SET</b>  
                     CategoryName='grapes', Description='Fruit very delicious' 
                     <b class="blue">WHERE</b> CategoryID=17
+                </li>
+            </ol>
+        </div>
+        <div class="second quatre">
+            <h2>
+                Clausulas SQL
+            </h2>
+            <dl>
+                <dt>
+                    WHERE
+                </dt>
+                    <dd>
 
+                    </dd>
+                <dt>
+                    TOP
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    ORDER BY
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    DISTINCT
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    GROUP BY
+                </dt>
+                    <dd>
+
+                    </dd>
+        </div>
+        <div class="second cinq">
+            <ol>
+                <li class="Comandos">
+                    <b class="blue">SELECT TOP</b> 10 * <b class="blue">FROM</b> Orders Details
+                    <b class="blue">WHERE</b> CustomerID='HANAR'
+                    <b class="blue">ORDER BY</b> OrderDate <b class="blue">DESC</b>
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT DISTINCT</b> (CustomerID)
+                    <b class="blue">FROM</b> Orders Details
+                    <b class="blue">ORDER BY</b> <b class="blue">ASC</b>
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> Country, Region, <b class="blue">SUM</b> (Sales) 
+                    <b class="blue">AS</b> TotalSales
+                    <b class="blue">FROM </b> Sales
+                    <b class="blue">GRUOP BY CUBE</b>(Country, Region);
+                </li>
+            </ol>
+        </div>
+        <div class="second quatre" style="background-color: rgb(128, 160, 150);">
+            <h2>
+                Funciones de agregación
+            </h2>
+            <dl>
+                <dt>
+                    MAX Y MIN
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    SUM
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    AVG
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    COUNT
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    HAVING
+                </dt>
+                    <dd>
+
+                    </dd>
+        </div>
+        <div class="second cinq" style="background-color: rgb(128, 160, 150); top: 714px;">
+            <ol>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">MAX</b> (UnitPrice)
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">GROUP BY</b> ProductID
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">SUM</b> (UnitPrice)
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">GROUP BY</b> ProductID
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">AVG</b> (UnitPrice)
+                    <b class="blue">AS</b> avgPrice
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">GROUP BY</b> OrderID
+                    <b class="blue">ORDER BY </b>avgPrice<b class="blue">ASC</b>
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">COUNT</b> (*)
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">WHERE </b>UnitPrice >= 263.50
+                    <b class="blue">GROUP BY</b> OrderID
+                </li>
+            </ol>
+        </div>
+        <div class="second quatre" style="background-color: rgb(160, 157, 128);">
+            <h2>
+                Operadores lógicos
+            </h2>
+            <dl>
+                <dt>
+                    AND
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    OR
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    IN
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    LIKE
+                </dt>
+                    <dd>
+
+                    </dd>
+                <dt>
+                    NOT
+                </dt>
+                    <dd>
+
+                    </dd>
+                </dd>
+                <dt>
+                    BETWEEN
+                </dt>
+                    <dd>
+
+                    </dd>
+                </dd>
+        </div>
+        <div class="second cinq" style="background-color: rgb(160, 157, 128); top: 1015px;">
+            <ol>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">MAX</b> (UnitPrice)
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">WHERE </b> JobTitle = 'Marketing Assistant'
+                    <b class="blue">AND </b> VacationHours > 41 ;
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">MAX</b> (UnitPrice)
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">WHERE </b> FirstName
+                    <b class="blue">IN </b> ('Mike', 'Michael'); 
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">COUNT</b> (*)
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">WHERE </b>phone
+                    <b class="LIKE">GROUP BY</b> '612%'
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">WHERE</b> fecha
+                    <b class="blue">BETWEEN </b>"20190102" <b class="blue">AND</b> "20190106 23:59:59"
+                </li>
+                <li class="Comandos">
+                    <b class="blue">SELECT</b> ProductID,
+                    <b class="blue">FROM</b> [Order Details]
+                    <b class="blue">WHERE</b> apellido= "Perez"
+                    <b class="blue">AND </b>(nombre="Roberto" <b class="blue">OR</b> idPaciente=7 
+                    <b class="blue">OR </b> idPais="PER")
+                    <b class="blue">AND</b> idPaciente <b class="blue">NOT IN </b> (6,3)
                 </li>
             </ol>
         </div>
