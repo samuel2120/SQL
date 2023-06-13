@@ -14,7 +14,7 @@ p.up{
 }
 div.second{
     width: 49%;
-    height: 240px;
+    height: 280px;
     text-align: center;
 }
 dt, li.Comandos{
@@ -28,11 +28,23 @@ div.deux{
 }
 div.trois{
     border-left: 5px;
-    background-color: rgba(247, 229, 131, 0.767);
+    background-color: rgb(160, 128, 148);
     position: absolute;
     left: 50%;
-    top: 110px;
+    top: 114px;
 }
 b.blue{
     color: rgb(18, 88, 129);
+}
+div.quatre{
+    background-color:  rgba(247, 229, 131, 0.767);
+    position: relative;
+
+}
+div.cinq{
+    border-left: 5px;
+    background-color:  rgba(247, 229, 131, 0.767);
+    position: absolute;
+    left: 50%;
+    top: 415px;
 }
